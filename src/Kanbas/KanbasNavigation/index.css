@@ -1,0 +1,32 @@
+.kanbas-navigation {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    background-color: #2c2c2c; /* Background color for the sidebar */
+  }
+  
+  .kanbas-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #2c2c2c;
+    border-bottom: 1px solid #3d3d3d; /* Slight border for separation */
+  }
+  
+  .kanbas-nav-link:hover {
+    background-color: #3d3d3d;
+  }
+  
+  .kanbas-nav-link.active {
+    background-color: #3d3d3d;
+  }
+  
+  /* If you're using an icon library, replace below styling accordingly */
+  .kanbas-nav-link::before {
+    content: '🔗'; /* Placeholder icon */
+    margin-right: 10px;
+  }
+  
+  
