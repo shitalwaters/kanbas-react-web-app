@@ -1,29 +1,24 @@
 import Labs from "./Labs";
 import HelloWorld from "./Labs/a3/HelloWorld";
-import Kanbas from "./Kanbas-old";
+import Kanbas from "./Kanbas/index";
+import Courses from "../src/Kanbas/Courses/index"; 
 import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
-import KanbasNavigation from "./Kanbas/KanbasNavigation";
-
 
 function App() {
   return (
     <HashRouter>
-    <div>
-    <Routes>
-      <Route path="/" element={<Navigate to="/Labs"/>}/>
-      <Route path="/hello" element={<HelloWorld/>}/>
-      <Route path="/Labs/*" element={<Labs/>}/>
-      <Route path="/Kanbas/*" element={<Kanbas/>}/>
-    </Routes>
-      <HelloWorld/>
-      <Labs/>
-      <Kanbas/>
-      <KanbasNavigation/>
+      <div>
+      <Routes>
+        <Route path="/" element={<Navigate to="/Labs"/>}/>
+        <Route path="/hello" element={<HelloWorld/>}/>
+        <Route path="/Labs/*" element={<Labs/>}/>
+        <Route path="/Kanbas/*" element={<Kanbas/>}/>
+        <Route path="/courses/:courseID/*" element={<Courses/>}/>
+        </Routes>
       </div>
-      </HashRouter>
+    </HashRouter>
 
   );
 }
-
 export default App;
